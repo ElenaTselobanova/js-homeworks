@@ -9,13 +9,14 @@ const images = [
 
 const slider = document.getElementById('slider');
 let step = 0;
+slider.src = `i/${images[0]}`;
 
 function showSlider(){
     if (step === images.length) {
         step = 0;
     }
     slider.src = `i/${images[step]}`;
-    step += 1;
+    step +=1;
 }
 
 setInterval(showSlider, 5000);
